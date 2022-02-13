@@ -1,0 +1,10 @@
+﻿@using MVC.Models
+@model MVC.Models.EmployeeModel
+
+@{
+    ViewBag.Title = "About";
+}
+
+
+@Html.Partial("~/Views/Partial/_Profile.cshtml", Model, new ViewDataDictionary() { new KeyValuePair<string, object>("Header", @MVC.Resources.MVC.AboutHeader) })
+

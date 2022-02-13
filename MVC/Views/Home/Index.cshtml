@@ -1,0 +1,23 @@
+﻿@using MVC.Helper
+@using MVC.Models
+@model MVC.Models.EmployeeModel
+
+@{
+    ViewBag.Title = "Home Page";
+    var date = DateTime.Now.ToString("yyyy MMMM dd");
+}
+
+
+
+@{
+    var temp = (EmployeeModel) ViewBag.Action;
+    var status = temp.Status;
+}
+
+
+@date
+<br/>
+<br/>
+
+@Html.Partial("~/Views/Partial/_Profile.cshtml", Model, new ViewDataDictionary() { new KeyValuePair<string, object>("Header", @MVC.Resources.MVC.Header ) })
+
